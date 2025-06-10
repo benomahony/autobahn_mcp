@@ -15,7 +15,7 @@ A simple Model Context Protocol (MCP) server that provides access to German Auto
 Using `uv` (recommended):
 
 ```bash
-uv add mcp httpx pydantic
+uv sync
 ```
 
 ## Usage
@@ -65,6 +65,24 @@ This server works with any MCP-compatible client such as:
 - Other MCP-enabled applications
 
 Configure your MCP client to connect to this server using the standard MCP configuration format.
+
+```json
+{
+  "mcpServers": {
+    "Autobahn Server": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "path/to/autobahn_mcp/main.py"
+      ]
+    }
+  }
+}
+```
 
 ## Data Source
 
