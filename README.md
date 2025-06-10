@@ -20,6 +20,8 @@ uv sync
 
 ## Usage
 
+![Autobahn](./autobahn.png)
+
 ### Running the Server
 
 ```bash
